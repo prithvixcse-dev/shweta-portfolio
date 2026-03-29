@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#c8c6c5",
+              "secondary-container": "#474746",
+              "on-tertiary-fixed": "#00174b",
+              "primary-container": "#d4af37",
+              "on-primary-fixed-variant": "#574500",
+              "tertiary": "#bfcdff",
+              "primary-fixed": "#ffe088",
+              "surface-container-highest": "#353534",
+              "inverse-primary": "#735c00",
+              "on-secondary-fixed": "#1c1b1b",
+              "on-tertiary-container": "#254188",
+              "surface-variant": "#353534",
+              "on-error": "#690005",
+              "surface": "#131313",
+              "on-primary-container": "#554300",
+              "inverse-surface": "#e5e2e1",
+              "surface-bright": "#3a3939",
+              "surface-container": "#201f1f",
+              "tertiary-fixed": "#dbe1ff",
+              "surface-container-lowest": "#0e0e0e",
+              "on-tertiary": "#082b72",
+              "on-secondary-fixed-variant": "#474746",
+              "secondary-fixed": "#e5e2e1",
+              "tertiary-fixed-dim": "#b4c5ff",
+              "on-tertiary-fixed-variant": "#27438a",
+              "on-primary": "#3c2f00",
+              "outline-variant": "#4d4635",
+              "secondary-fixed-dim": "#c8c6c5",
+              "on-error-container": "#ffdad6",
+              "error-container": "#93000a",
+              "on-secondary-container": "#b7b5b4",
+              "tertiary-container": "#97b0ff",
+              "primary": "#f2ca50",
+              "surface-dim": "#131313",
+              "on-background": "#e5e2e1",
+              "inverse-on-surface": "#313030",
+              "surface-tint": "#e9c349",
+              "error": "#ffb4ab",
+              "background": "#131313",
+              "on-secondary": "#313030",
+              "on-surface": "#e5e2e1",
+              "primary-fixed-dim": "#e9c349",
+              "on-primary-fixed": "#241a00",
+              "outline": "#99907c",
+              "on-surface-variant": "#d0c5af",
+              "surface-container-low": "#1c1b1b",
+              "surface-container-high": "#2a2a2a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .glass-card {
+            background: rgba(32, 31, 31, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hero-blob {
+            background: radial-gradient(circle, rgba(242, 202, 80, 0.15) 0%, rgba(242, 202, 80, 0) 70%);
+            filter: blur(60px);
+        }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary selection:text-on-primary">
+<div class="grain-overlay"></div>
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#201f1f]/70 backdrop-blur-2xl shadow-2xl shadow-[#e5e2e1]/5">
+<div class="flex justify-between items-center px-12 py-6 max-w-screen-2xl mx-auto">
+<a class="text-2xl font-bold tracking-tighter text-[#f2ca50]" href="#">ALCHEMIST</a>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-['Manrope'] font-light tracking-wide uppercase text-sm text-[#f2ca50] border-b border-[#f2ca50]/30 pb-1 hover:text-[#f2ca50] transition-colors duration-300" href="#work">Work</a>
+<a class="font-['Manrope'] font-light tracking-wide uppercase text-sm text-[#e5e2e1]/60 hover:text-[#f2ca50] transition-colors duration-300" href="#about">About</a>
+<a class="font-['Manrope'] font-light tracking-wide uppercase text-sm text-[#e5e2e1]/60 hover:text-[#f2ca50] transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded font-['Manrope'] font-semibold text-xs uppercase tracking-widest active:scale-95 duration-200">
+                Hire Me
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center px-12 pt-20 overflow-hidden">
+<div class="max-w-screen-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-8 z-10">
+<span class="font-label text-primary tracking-[0.3em] uppercase text-sm block mb-4">Graphic Designer · Video Editor</span>
+<h1 class="font-headline font-extrabold text-7xl md:text-[8rem] leading-[0.9] tracking-tighter text-on-surface mb-8">
+                        JULIAN<br/>AURELIUS
+                    </h1>
+<p class="font-body font-light text-xl text-on-surface-variant max-w-md mb-12 leading-relaxed">
+                        Crafting digital experiences through motion and brand design. Turning abstract concepts into cinematic reality.
+                    </p>
+<div class="flex gap-6">
+<a class="inline-flex items-center gap-3 bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-5 rounded-md font-headline font-bold text-sm uppercase tracking-wider hover:opacity-90 transition-all shadow-xl shadow-primary/10" href="#work">
+                            View My Work
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Abstract Shape/Blob -->
+<div class="hidden md:block md:col-span-4 relative h-full">
+<div class="hero-blob absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[550px] bg-surface-container rounded-2xl rotate-6 overflow-hidden shadow-2xl border border-outline-variant/10">
+<img class="w-full h-full object-cover opacity-60 mix-blend-luminosity grayscale hover:grayscale-0 transition-all duration-700" data-alt="Modern abstract design studio interior with neon lighting and high-end workstations in a dark atmospheric setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhwgtcIDvZbUrz38NSkYoN5KKQgRLUoRKpodwmvRcF0OfrdQkWK_iCrGJRQMA0d8Ly_QT1f8Lx_mLn7rrpTbOQWozCYYQ6KkK9RDfW9A1j301IpPzuh52dY6lovMTzBPB00X7xkWoto8mFWsrxS6fcvgIoraOeZ8K1Zo7YOmo7S3zSkoqtaZso4_rNPs3JoQvA5XUOCxUpONyPaw5if6NUR3bcXR-0RWzJxKpECOC7hX5nxm2Qewz04dwrWQAAZzOgaUpM5ZOYShYc"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Grid Section -->
+<section class="py-32 px-12 bg-surface-container-low" id="work">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div>
+<h2 class="font-headline font-bold text-5xl text-on-surface mb-4">Selected Works</h2>
+<p class="text-on-surface-variant font-light text-lg">A curation of visual identities and motion narratives.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2 text-xs font-label uppercase tracking-widest text-primary border border-outline-variant/30 rounded-full hover:bg-primary/5 transition-colors">All</button>
+<button class="px-6 py-2 text-xs font-label uppercase tracking-widest text-on-surface-variant/60 hover:text-primary transition-colors">Branding</button>
+<button class="px-6 py-2 text-xs font-label uppercase tracking-widest text-on-surface-variant/60 hover:text-primary transition-colors">Motion</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Project Card 1 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container-highest rounded-lg transition-all duration-500 hover:-translate-y-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:opacity-40" data-alt="Abstract 3D liquid metal shapes in golden and dark obsidian colors creating a luxury futuristic branding visual" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZxAh5QO-2YAj5WC93fi2yiKxB5AmBYsY-alMf80-4DYpCayzs4fg8iaT0bOFGFzl1jTUcFlYfQDXxyGQK6FEu10ZD18I4TETbIm90pMTp_7veyRq8jJNIXPLN7cvTZTgv6R5j0-KCZ0aVN8Z6CXZYQPYtoxsydct5LB7IeWcgZAeLnk-0R-LDPSi-mpDjElLCoWvx96tJgCVDPe8-pK1_vlMJyR1erQJ9zrexskT2VhXIKFYfEWr7t6Z9bnesYQ19HSRWxn8eJimn"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-card p-6 rounded-lg border border-outline-variant/20">
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-primary mb-2 block">Branding</span>
+<h3 class="font-headline font-bold text-2xl text-on-surface">Nocturne Labs</h3>
+</div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="bg-primary text-on-primary px-8 py-3 font-label font-bold text-xs uppercase tracking-widest rounded-full">View Project</span>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container-highest rounded-lg transition-all duration-500 hover:-translate-y-2 lg:mt-16">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:opacity-40" data-alt="Sleek modern electronics and hardware design with dramatic shadows and golden highlights for high-end tech branding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNWbcsrL3b--Z5XvgWMtOPzNhbQzwgJjPFj6XZJ5oMrBDwmG3-PBNFx-OxWDk0xO_lZM1l9Oa5il2w-uVidHdKQWZrWKMnQhvpdNVpvubY8hHrmzMWDD9Hbhj-m4WlfD2EVOJfhG2MED4DeuG9NL-f7LrOndMVqhgIwXJkHG01gqBMvJfQVzle0Y6qrVcUP_hAwTYl6nVj1P_iKB6Yxr3U74EiDfvT3YdPOVmK2KeFgzr752fM8KhW8YAPpz6q3nDQjnbezvAl1jbE"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-card p-6 rounded-lg border border-outline-variant/20">
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-primary mb-2 block">Motion</span>
+<h3 class="font-headline font-bold text-2xl text-on-surface">Kinetic Core</h3>
+</div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="bg-primary text-on-primary px-8 py-3 font-label font-bold text-xs uppercase tracking-widest rounded-full">View Project</span>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container-highest rounded-lg transition-all duration-500 hover:-translate-y-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:opacity-40" data-alt="Vibrant multi-colored abstract digital art with smooth glass-like textures and layered composition for UI design showcase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHAGO3MfqyV0hwx97l4Ceg2ozCFZkpqepbZt-SltCFVqvVp4lSpsgsCQewOjokiJkyZmrxhcnvF6dOSJKBAlglarvb0GNWFnlCQVuevp9fIxvZpFfn-mj-3FDkoRLuvjvUdUK7InJctkY9S2wVUu-VIACkrWh8Gn-zT4bC-7IShVGIrW0UzX4_g9xMqZ7RrDXGAWC_oSzVW9pwq55unn_XfjaN4VDDPSzbLeDZMxkoiiS6Xv501OqAKBmsnvMrhtm-V0fRdvH4Oykk"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-card p-6 rounded-lg border border-outline-variant/20">
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-primary mb-2 block">UI Design</span>
+<h3 class="font-headline font-bold text-2xl text-on-surface">Ether Interface</h3>
+</div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="bg-primary text-on-primary px-8 py-3 font-label font-bold text-xs uppercase tracking-widest rounded-full">View Project</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-40 px-12 bg-surface text-center overflow-hidden relative">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent"></div>
+<div class="max-w-4xl mx-auto relative z-10">
+<h2 class="font-headline font-black text-6xl md:text-8xl text-on-surface mb-12 tracking-tighter">LET'S CREATE<br/><span class="text-primary italic">MAGIC.</span></h2>
+<p class="font-body font-light text-on-surface-variant text-xl mb-16 max-w-lg mx-auto leading-relaxed">
+                    Available for freelance opportunities and collaborative ventures in high-end design.
+                </p>
+<a class="group relative inline-flex items-center gap-4 text-primary font-headline font-bold text-2xl tracking-tight" href="mailto:hello@alchemist.design">
+                    Start a Conversation
+                    <div class="w-12 h-[1px] bg-primary group-hover:w-20 transition-all duration-300"></div>
+</a>
+</div>
+<!-- Ambient Light -->
+<div class="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 px-12 bg-[#1c1b1b]">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-lg font-black text-[#f2ca50]">ALCHEMIST</span>
+<p class="font-['Inter'] font-light text-[#e5e2e1]/50 text-xs tracking-[0.05em] uppercase">© 2024 The Modern Alchemist. All rights reserved.</p>
+</div>
+<div class="flex gap-12">
+<a class="font-['Inter'] font-light text-[#e5e2e1]/40 text-xs tracking-[0.05em] uppercase hover:text-[#f2ca50] transition-opacity duration-300" href="#">Instagram</a>
+<a class="font-['Inter'] font-light text-[#e5e2e1]/40 text-xs tracking-[0.05em] uppercase hover:text-[#f2ca50] transition-opacity duration-300" href="#">LinkedIn</a>
+<a class="font-['Inter'] font-light text-[#e5e2e1]/40 text-xs tracking-[0.05em] uppercase hover:text-[#f2ca50] transition-opacity duration-300" href="#">Behance</a>
+<a class="font-['Inter'] font-light text-[#e5e2e1]/40 text-xs tracking-[0.05em] uppercase hover:text-[#f2ca50] transition-opacity duration-300" href="#">Dribbble</a>
+</div>
+</div>
+</footer>
+</body></html>
