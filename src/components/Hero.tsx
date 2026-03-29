@@ -66,7 +66,7 @@ export default function Hero() {
           {/* Photo frame */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] lg:w-[360px] h-[430px] lg:h-[520px] rounded-2xl rotate-3 overflow-hidden shadow-2xl border border-outline-variant/10 animate-fade-in delay-300">
             <Image
-              src="/anshika.jpeg"
+              src="/trial.jpg"
               alt="Shweta Sharma — Graphic Designer, Video Editor & VFX Artist"
               fill
               priority

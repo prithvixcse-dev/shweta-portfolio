@@ -150,8 +150,8 @@ export default function ContactForm() {
 
       <p className="text-center text-on-surface-variant/30 text-xs font-light">
         Or email directly at{" "}
-        <a href="mailto:anshika.sharma.vfx28@gmail.com" className="text-primary hover:underline">
-          anshika.sharma.vfx28@gmail.com
+        <a href="mailto:shweta.sharma.vfx@gmail.com" className="text-primary hover:underline">
+          shweta.sharma.vfx@gmail.com
         </a>
       </p>
     </form>

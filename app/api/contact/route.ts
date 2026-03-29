@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
         // To send to any email, verify your own domain at resend.com/domains.
         // Until then, RESEND_TO_EMAIL should equal your Resend account email.
         const toEmail =
-          process.env.RESEND_TO_EMAIL ?? "anshika.sharma.vfx28@gmail.com";
+          process.env.RESEND_TO_EMAIL ?? "shweta.sharma.vfx@gmail.com";
 
         const { data, error: sendError } = await resend.emails.send({
           from: "Portfolio Contact <onboarding@resend.dev>",
@@ -107,7 +107,7 @@ export async function POST(req: NextRequest) {
         <!-- Footer -->
         <tr><td style="padding:20px 40px;background:#1c1b1b;">
           <p style="margin:0;font-size:11px;color:rgba(229,226,225,0.3);text-align:center;">
-            Sent from your portfolio contact form · anshika.sharma.vfx28@gmail.com
+            Sent from your portfolio contact form · shweta.sharma.vfx@gmail.com
           </p>
         </td></tr>
       </table>

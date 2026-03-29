@@ -6,7 +6,7 @@ import type { Project } from "@/src/lib/types";
 
 // Only these emails can access admin
 const ALLOWED_ADMIN_EMAILS = [
-  "anshika.sharma.vfx28@gmail.com",
+  "shweta.sharma.vfx@gmail.com",
   "prithvixchiky@gmail.com",
 ];
 
